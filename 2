@@ -1,0 +1,12 @@
+ESCRIBA SU CÓDIGO AQUÍ -->
+parametros = {'v_motor' : 0 , 'i_motor' : 0 , 'set_pwm' : 0 , 'motor_on' : 0 }
+datos = []
+datos = datos_recibidos.split(',')
+parametros['v_motor']=float(datos[0])
+parametros['i_motor']=float(datos[1])
+parametros['set_pwm']=int(datos[2]) 
+parametros['motor_on']=int(datos[3]) > 0
+
+
+print(parametros)
+print(datos)
