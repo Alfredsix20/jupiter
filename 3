@@ -1,0 +1,17 @@
+# Si su código funciona correctamente, el siguiente código debiera ejecutarse sin errores:
+# *** NO MODIFIQUE ESTA CELDA ***
+
+print('... v_motor no contiene datos' if len(v_motor) == 0 else '... v_motor contiene {} datos'.format(len(v_motor)))
+print('... i_motor no contiene datos' if len(v_motor) == 0 else '... i_motor contiene {} datos'.format(len(i_motor)))
+print('el número de datos almacenados es {}'.format('correcto' if (len(v_motor) == 26 and len(i_motor) == 26) else 'incorrecto'))
+
+v_motor_types, i_motor_types = [], []
+
+for value in v_motor:
+    if type(value) not in v_motor_types: v_motor_types.append(type(value))
+        
+for value in i_motor:
+    if type(value) not in i_motor_types: i_motor_types.append(type(value))
+    
+print('el tipo de datos en v_motor es {}, lo cual es {}'.format(v_motor_types, 'correcto' if (float in v_motor_types and len(v_motor_types)==1) else 'incorrecto'))
+print('el tipo de datos en i_motor es {}, lo cual es {}'.format(i_motor_types, 'correcto' if (float in i_motor_types and len(i_motor_types)==1) else 'incorrecto'))
