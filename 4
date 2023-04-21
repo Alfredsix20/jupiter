@@ -1,0 +1,25 @@
+# La variable 'texto' contiene la información la cadena de caracteres que debe ser analizada.
+
+texto = "Python es un lenguaje de alto nivel de programación interpretado cuya filosofía hace hincapié en la legibilidad de su código, se utiliza para desarrollar aplicaciones de todo tipo, ejemplos: Instagram, Netflix, Spotify, Panda3D, entre otros. Fuente: Wikipedia"
+
+# 1. Contar caracteres. Se lee directamente la longitud de la variable str, utilizando len()
+n_caracteres = len(texto)
+print(f'El número de caracteres en el texto es: {n_caracteres}')
+
+# 2. Contar palabras. Se obtiene una lista de elementos separados por espacios. El número total de elementos de la lista corresponde al número de palabras
+n_palabras = len(texto.split(' '))
+print(f'El número de palabras en el texto es: {n_palabras}')
+
+# 3. Identificamos caracteres distintos y los almacenamos en un diccionario.
+caracteres = {}
+for caracter in texto:
+    if caracter not in caracteres:
+        # Si es primera vez que aparece un caracter, lo agregamos al diccionario
+        caracteres[caracter] = 1
+    else:
+        # Si el caracter ya está en el diccionario, aumentamos el conteo
+        caracteres[caracter] += 1
+
+# Finalmente desplegamos en pantalla el conteo de caracteres
+for key in caracteres.keys():
+    print(f'el caracter {key} aparece {caracteres[key]} veces')
